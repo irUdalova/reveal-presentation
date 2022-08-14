@@ -1,0 +1,149 @@
+/**
+ * Layout helpers.
+ */
+
+// Stretch an element vertically based on available space
+.reveal .stretch,
+.reveal .r-stretch {
+	max-width: none;
+	max-height: none;
+}
+
+.reveal pre.stretch code,
+.reveal pre.r-stretch code {
+	height: 100%;
+	max-height: 100%;
+	box-sizing: border-box;
+}
+
+// Text that auto-fits its container
+.reveal .r-fit-text {
+	display: inline-block; // https://github.com/rikschennink/fitty#performance
+	white-space: nowrap;
+}
+
+// Stack multiple elements on top of each other
+.reveal .r-stack {
+	display: grid;
+}
+
+.reveal .r-stack > * {
+	grid-area: 1/1;
+	margin: auto;
+}
+
+// Horizontal and vertical stacks
+.reveal .r-vstack,
+.reveal .r-hstack {
+	display: flex;
+
+	img, video {
+		min-width: 0;
+		min-height: 0;
+		object-fit: contain;
+	}
+}
+
+.reveal .r-vstack {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.reveal .r-hstack {
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+// Naming based on tailwindcss
+.reveal .items-stretch { align-items: stretch; }
+.reveal .items-start { align-items: flex-start; }
+.reveal .items-center { align-items: center; }
+.reveal .items-end { align-items: flex-end; }
+
+.reveal .justify-between { justify-content: space-between; }
+.reveal .justify-around { justify-content: space-around; }
+.reveal .justify-start { justify-content: flex-start; }
+.reveal .justify-center { justify-content: center; }
+.reveal .justify-end { justify-content: flex-end; }
+
+// ------------------- custom styles ------------------------------
+
+.reveal .big-title {
+  color: var(--r-link-color);
+  font-weight: 800;
+  font-size: 200px;
+  margin-top: 100px;
+  line-height: 150px;
+}
+
+.reveal .sub-title {
+  font-size: 28px;
+}
+
+.reveal .new-big-title {
+  color: var(--r-link-color);
+  font-weight: 800;
+  font-size: 200px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  line-height: 150px;
+}
+
+.reveal .new-sub-title {
+  line-height: 1.2;
+  margin: 0;
+}
+
+.reveal .blue-insert {
+  color: var(--r-link-color);
+}
+
+.reveal .red-insert {
+  color: #5C1A0E;
+}
+
+.reveal li {
+  list-style-type: none; 
+ }
+ .reveal li:before {
+  color: var(--r-link-color);
+  content: "●"; 
+  padding-right: 10px; 
+ }
+
+ .reveal .curve {
+  background-image: url('/img/curve.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 50px auto 0;
+  width: 733px;
+  height: 436px;
+  position: relative;
+ }
+
+ .reveal .pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 210px;
+  font-size: 24px;
+ }
+
+ .reveal .pos2 {
+  position: absolute;
+  bottom: 160px;
+  left: 290px;
+  font-size: 24px;
+}
+
+.reveal .pos3 {
+  position: absolute;
+  bottom: 330px;
+  left: 450px;
+  font-size: 40px;
+}
+
+.reveal .svg-wrap {
+  font-size: 60px;
+}
